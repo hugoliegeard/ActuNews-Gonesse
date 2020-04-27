@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
 
 class UserController
 {
@@ -8,7 +11,8 @@ class UserController
      */
     public function login()
     {
-        echo '<h1>PAGE CONNEXION | CONTROLEUR</h1>';
+        # echo '<h1>PAGE CONNEXION | CONTROLEUR</h1>';
+        return new Response('<h1>PAGE CONNEXION | CONTROLEUR| RESPONSE</h1>');
     }
 
     /**
@@ -16,6 +20,7 @@ class UserController
      */
     public function register()
     {
-        echo '<h1>PAGE INSCRIPTION | CONTROLEUR</h1>';
+        # echo '<h1>PAGE INSCRIPTION | CONTROLEUR</h1>';
+        return new Response('<h1>PAGE INSCRIPTION | CONTROLEUR| RESPONSE</h1>');
     }
 }

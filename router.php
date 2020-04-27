@@ -8,5 +8,5 @@
 
 # Récupération des paramètres GET.
 # cf. https://www.php.net/manual/fr/language.operators.comparison.php
-$controller = ucfirst($_GET['controller']) . 'Controller';
-$action = $_GET['action'];
+$controller = 'App\\Controller\\' . ucfirst($request->query->get('controller')) . 'Controller';
+$action = $request->query->get('action');

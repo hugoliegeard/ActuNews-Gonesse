@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController
 {
@@ -12,7 +15,8 @@ class DefaultController
      */
     public function home()
     {
-        echo '<h1>PAGE ACCUEIL | CONTROLEUR</h1>';
+        # echo '<h1>PAGE ACCUEIL | CONTROLEUR</h1>';
+        return new Response('<h1>PAGE ACCUEIL | CONTROLEUR | RESPONSE</h1>');
     }
 
     /**
@@ -21,7 +25,8 @@ class DefaultController
      */
     public function category()
     {
-        echo '<h1>PAGE CATEGORIE | CONTROLEUR</h1>';
+        # echo '<h1>PAGE CATEGORIE | CONTROLEUR</h1>';
+        return new Response('<h1>PAGE CATEGORIE | CONTROLEUR | RESPONSE</h1>');
     }
 
     /**
@@ -30,6 +35,7 @@ class DefaultController
      */
     public function article()
     {
-        echo '<h1>PAGE ARTICLE | CONTROLEUR</h1>';
+        # echo '<h1>PAGE ARTICLE | CONTROLEUR</h1>';
+        return new Response('<h1>PAGE ARTICLE | CONTROLEUR | RESPONSE</h1>');
     }
 }
