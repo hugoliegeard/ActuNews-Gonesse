@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 
-class DefaultController
+class DefaultController extends AbstractController
 {
     /**
      * La fonction "home" est ce qu'on
@@ -15,8 +15,7 @@ class DefaultController
      */
     public function home()
     {
-        # echo '<h1>PAGE ACCUEIL | CONTROLEUR</h1>';
-        return new Response('<h1>PAGE ACCUEIL | CONTROLEUR | RESPONSE</h1>');
+        return $this->render('default/home.html.twig');
     }
 
     /**
@@ -25,8 +24,7 @@ class DefaultController
      */
     public function category()
     {
-        # echo '<h1>PAGE CATEGORIE | CONTROLEUR</h1>';
-        return new Response('<h1>PAGE CATEGORIE | CONTROLEUR | RESPONSE</h1>');
+        return $this->render('default/category.html.twig');
     }
 
     /**
