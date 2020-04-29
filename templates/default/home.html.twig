@@ -1,15 +1,41 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-    ActuNews | premier site d'actualité en France
+    ActuNews | Premier site d'actualité en France
 {% endblock %}
 
 {% block content %}
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <div class="p-3 mx-auto text-center">
+        <h1 class="display-4">ActuNews</h1>
+    </div>
+
+    <div class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+
+                {# Pour chaque article se trouvant dans articleS #}
+                {% for article in articles %}
+
+                    <div class="col-md-4 mt-4">
+                        <div class="card">
+                            <img src="{{ basePath ~ '/images/articles/' ~ article.image }}"
+                                 class="card-img-top" alt="{{ article.title }}">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="{{ basePath ~ '/article/' ~ article.id }}">
+                                        {{ article.title }}
+                                    </a>
+                                </h5>
+                                <p class="card-text">
+                                    {{ article.content | striptags | u.truncate(150, '...') }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
     </div>
 {% endblock %}

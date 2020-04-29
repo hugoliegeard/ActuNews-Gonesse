@@ -17,4 +17,7 @@ require_once 'middleware/router.php';
 # Chargement de Twig
 require_once 'middleware/twig.php';
 
+# Chargement de PDO
+require_once 'middleware/pdo.php';
+
 # ----------- Fin du chargement des Middlewares ----------- #

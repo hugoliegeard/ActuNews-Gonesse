@@ -9,6 +9,8 @@ RewriteCond %{REQUEST_FILENAME} -l
 RewriteRule ^ - [L]
 
 # Règles de Réecriture
+RewriteRule ^categorie/([^/]+) index.php?controller=default&action=category&id=$1 [QSA,L]
+RewriteRule ^article/([^/]+) index.php?controller=default&action=article&id=$1 [QSA,L]
 RewriteRule ^([^/]+)/([^/]+) index.php?controller=$1&action=$2 [QSA,L]
 
 # Exemple
